@@ -6,6 +6,7 @@ else
     echo '~/.vimrc文件已经存在'
 fi
 
+# 配置插件目录
 if [ ! -d ~/.vim/bundle ]; then
     mkdir ~/.vim/bundle -p
 fi
@@ -18,6 +19,7 @@ else
     git clone http://github.com/gmarik/vundle.git
 fi 
 
-
+# 安装或者更新
 vim +BundleInstall! +BundleClean +q
 
+echo 'All is ok!'
