@@ -63,6 +63,9 @@ call vundle#rc()
 " let Vundle manage Vundle  
 Bundle 'gmarik/vundle'
 
+" 依赖
+Bundle 'MarcWeber/vim-addon-mw-utils'
+
 " General
 Bundle 'scrooloose/nerdtree'
 Bundle 'jiangmiao/auto-pairs'
@@ -121,6 +124,7 @@ Bundle 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
 
 " HTML
+" vim-haml: This project contains the runtime files for Haml, Sass, and SCSS that ship with Vim.
 Bundle 'amirh/HTML-AutoCloseTag'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'gorodinskiy/vim-coloresque'
