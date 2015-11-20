@@ -89,8 +89,6 @@ Bundle 'plasticboy/vim-markdown'
 "Bundle 'tpope/vim-markdown'
 "let g:vim_markdown_frontmatter=1
 
-Bundle 'jiangmiao/auto-pairs'
-
 " 自动补全
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
