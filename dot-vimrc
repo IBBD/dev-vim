@@ -1,3 +1,12 @@
+" 
+" 安装各种必要插件的同时，尽量避免对vim做太多的改动
+"
+" Filename: dot-vimrc
+" Author:   Alex cyy0523xc@gmail.com
+" Usage:    bash install.sh
+" Version:  2015-11-20
+" See:      README.md
+"
 
 " 基础配置
 set number
@@ -59,14 +68,53 @@ Bundle 'gmarik/vundle'
 
 " 依赖
 Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+if executable('ag')
+    Bundle 'mileszs/ack.vim'
+    let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
+elseif executable('ack-grep')
+    let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+    Bundle 'mileszs/ack.vim'
+elseif executable('ack')
+    Bundle 'mileszs/ack.vim'
+endif
 
 " General
 Bundle 'scrooloose/nerdtree'
 Bundle 'jiangmiao/auto-pairs'
-Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'ctrlpvim/ctrlp.vim'
+
+" 编程基础插件
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-commentary'
+Bundle 'luochen1990/rainbow'
+if executable('ctags')
+    Bundle 'majutsushi/tagbar'
+endif
+
+" vim-commentary设置
+" 设置Python注释字符
+autocmd FileType python,shell set commentstring=#\ %s 
+autocmd FileType mako set cms=##\ %s
+
+"map <C-e> <plug>NERDTreeTabsToggle<CR>
+map <leader>e :NERDTreeFind<CR>
+nmap <leader>nt :NERDTreeFind<CR>
+
+let NERDTreeShowBookmarks=1
+let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
+let NERDTreeChDirMode=0
+let NERDTreeQuitOnOpen=1
+let NERDTreeMouseMode=2
+let NERDTreeShowHidden=1
+let NERDTreeKeepTreeInNewTab=1
+let g:nerdtree_tabs_open_on_gui_startup=0
 
 " power-line
 Bundle 'Lokaltog/vim-powerline'
@@ -80,6 +128,23 @@ set encoding=utf-8
 Bundle 'tpope/vim-pathogen'
 Bundle 'godlygeek/tabular'
 
+nmap <Leader>a& :Tabularize /&<CR>
+vmap <Leader>a& :Tabularize /&<CR>
+nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
+nmap <Leader>a=> :Tabularize /=><CR>
+vmap <Leader>a=> :Tabularize /=><CR>
+nmap <Leader>a: :Tabularize /:<CR>
+vmap <Leader>a: :Tabularize /:<CR>
+nmap <Leader>a:: :Tabularize /:\zs<CR>
+vmap <Leader>a:: :Tabularize /:\zs<CR>
+nmap <Leader>a, :Tabularize /,<CR>
+vmap <Leader>a, :Tabularize /,<CR>
+nmap <Leader>a,, :Tabularize /,\zs<CR>
+vmap <Leader>a,, :Tabularize /,\zs<CR>
+nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+
 " 快速切换括号引号或者标签
 Bundle 'tpope/vim-surround'
 Bundle 'mattn/emmet-vim'
@@ -90,9 +155,21 @@ Bundle 'plasticboy/vim-markdown'
 "let g:vim_markdown_frontmatter=1
 
 " 自动补全
-Bundle 'garbas/vim-snipmate'
+"Bundle 'garbas/vim-snipmate'
+"Bundle 'honza/vim-snippets'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
-"Bundle 'Valloric/YouCompleteMe'
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
 
 " PHP
 Bundle 'arnaud-lb/vim-php-namespace'
@@ -132,5 +209,9 @@ Bundle 'elixir-lang/vim-elixir'
 Bundle 'carlosgaldino/elixir-snippets'
 Bundle 'mattreduce/vim-mix'
 
-
 filetype plugin indent on
+
+" 导入本地vim配置文件
+if filereadable(expand("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif
