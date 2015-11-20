@@ -17,6 +17,7 @@
 
 ```sh 
 # 说明：该脚本也可以用于更新插件
+git pull
 ./install.sh 
 ```
 
