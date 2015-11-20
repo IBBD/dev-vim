@@ -10,6 +10,7 @@
 - 尽量不要改变vim的习惯，包括快捷键等。
 - 文档方面主要是markdown格式
 - 开发语言方面主要是php，python，javascript等，支持react语法最好
+- 交换大小写键和ESC键（基于xmodmap）
 
 ## 安装
 
@@ -23,5 +24,52 @@ git pull
 
 注：只在ubuntu平台下使用，其他平台表现未知。
 
+
+## 主要插件使用说明
+
+### 自定义快捷键
+
+- 快速将Tab键替换为4个空格：`<Leader>tt` （这里是一个反斜杠）
+
+### tabular: 按照特定字符进行对齐
+
+快捷键如下：
+
+```
+nmap <Leader>\& :Tabularize /&<CR>
+vmap <Leader>\& :Tabularize /&<CR>
+nmap <Leader>\= :Tabularize /^[^=]*\zs=<CR>
+vmap <Leader>\= :Tabularize /^[^=]*\zs=<CR>
+nmap <Leader>\=> :Tabularize /=><CR>
+vmap <Leader>\=> :Tabularize /=><CR>
+nmap <Leader>\: :Tabularize /:<CR>
+vmap <Leader>\: :Tabularize /:<CR>
+nmap <Leader>\:: :Tabularize /:\zs<CR>
+vmap <Leader>\:: :Tabularize /:\zs<CR>
+nmap <Leader>\, :Tabularize /,<CR>
+vmap <Leader>\, :Tabularize /,<CR>
+nmap <Leader>\,, :Tabularize /,\zs<CR>
+vmap <Leader>\,, :Tabularize /,\zs<CR>
+nmap <Leader>\<Bar> :Tabularize /<Bar><CR>
+vmap <Leader>\<Bar> :Tabularize /<Bar><CR>
+```
+
+说明：Leader键默认就是`\\` （一个反斜杠），尽量不要修改成逗号
+
+例如按等号对齐，可以输入：`\\\\=` （输入两个反斜杠，再输入一个等号）
+
+### NERDTree: 目录文件浏览
+
+快捷键如下：
+
+```
+map <leader>e :NERDTreeFind<CR>
+nmap <leader>nt :NERDTreeFind<CR>
+```
+
+### ctrlp: 快速浏览文件（当前文件夹）
+
+快捷键是：`Ctrl + p`
+在小窗口里面还可以使用：`Ctrl + j`, `Ctrl + k`
 
 

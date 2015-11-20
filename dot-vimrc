@@ -56,8 +56,19 @@ set nohls
 " 时，别忘记回车
 set incsearch
 
+" 让vim记忆上次编辑的位置
+autocmd BufReadPost *
+            \ if line("'\"")>0&&line("'\"")<=line("$") |
+            \    exe "normal g'\"" |
+            \ endif
 
-"-------------------------- 插件 ---------------------
+" 使用tt快捷键，快速替换tab为4个空格
+nmap <Leader>tt :%s/\t/    /g<CR>
+
+
+"--------------------------------------------------------------
+"-------------------------- 插件 ------------------------------
+"--------------------------------------------------------------
 
 filetype off
 set rtp+=~/.vim/bundle/vundle/
@@ -128,22 +139,23 @@ set encoding=utf-8
 Bundle 'tpope/vim-pathogen'
 Bundle 'godlygeek/tabular'
 
-nmap <Leader>a& :Tabularize /&<CR>
-vmap <Leader>a& :Tabularize /&<CR>
-nmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
-vmap <Leader>a= :Tabularize /^[^=]*\zs=<CR>
-nmap <Leader>a=> :Tabularize /=><CR>
-vmap <Leader>a=> :Tabularize /=><CR>
-nmap <Leader>a: :Tabularize /:<CR>
-vmap <Leader>a: :Tabularize /:<CR>
-nmap <Leader>a:: :Tabularize /:\zs<CR>
-vmap <Leader>a:: :Tabularize /:\zs<CR>
-nmap <Leader>a, :Tabularize /,<CR>
-vmap <Leader>a, :Tabularize /,<CR>
-nmap <Leader>a,, :Tabularize /,\zs<CR>
-vmap <Leader>a,, :Tabularize /,\zs<CR>
-nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
-vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+" tabular常用快捷键设置
+nmap <Leader>\& :Tabularize /&<CR>
+vmap <Leader>\& :Tabularize /&<CR>
+nmap <Leader>\= :Tabularize /^[^=]*\zs=<CR>
+vmap <Leader>\= :Tabularize /^[^=]*\zs=<CR>
+nmap <Leader>\=> :Tabularize /=><CR>
+vmap <Leader>\=> :Tabularize /=><CR>
+nmap <Leader>\: :Tabularize /:<CR>
+vmap <Leader>\: :Tabularize /:<CR>
+nmap <Leader>\:: :Tabularize /:\zs<CR>
+vmap <Leader>\:: :Tabularize /:\zs<CR>
+nmap <Leader>\, :Tabularize /,<CR>
+vmap <Leader>\, :Tabularize /,<CR>
+nmap <Leader>\,, :Tabularize /,\zs<CR>
+vmap <Leader>\,, :Tabularize /,\zs<CR>
+nmap <Leader>\<Bar> :Tabularize /<Bar><CR>
+vmap <Leader>\<Bar> :Tabularize /<Bar><CR>
 
 " 快速切换括号引号或者标签
 Bundle 'tpope/vim-surround'
@@ -210,6 +222,10 @@ Bundle 'carlosgaldino/elixir-snippets'
 Bundle 'mattreduce/vim-mix'
 
 filetype plugin indent on
+
+"--------------------------------------------------------------
+"-------------------------- 插件 ------------------------------
+"--------------------------------------------------------------
 
 " 导入本地vim配置文件
 if filereadable(expand("~/.vimrc.local"))
