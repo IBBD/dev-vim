@@ -16,6 +16,7 @@ else
     else
         echo $link_path
         echo "ERROR: ~/.vimrc没有链接到$source_vimrc"
+        echo "如果确实希望使用该配置，建议先手动清除原有的vim配置，可以执行命令：rm -rf ~/.vim*"
         exit 1
     fi
 fi
