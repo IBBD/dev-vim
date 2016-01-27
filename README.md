@@ -24,6 +24,8 @@ git pull
 
 注：只在ubuntu平台下使用，其他平台表现未知。
 
+升级的时候，如果提示YCM太旧，则可以重新编译安装YCM：`./install-YoucompleteMe.sh`
+
 
 ## 主要插件使用说明
 
