@@ -221,6 +221,13 @@ Bundle 'elixir-lang/vim-elixir'
 Bundle 'carlosgaldino/elixir-snippets'
 Bundle 'mattreduce/vim-mix'
 
+" Color
+Bundle 'altercation/vim-colors-solarized'
+
+"syntax enable
+"set background=dark
+"colorscheme solarized
+
 filetype plugin indent on
 
 "--------------------------------------------------------------
