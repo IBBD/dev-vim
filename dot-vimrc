@@ -56,6 +56,9 @@ set nohls
 " 时，别忘记回车
 set incsearch
 
+" 取消代码折叠
+set nofoldenable
+
 " 让vim记忆上次编辑的位置
 autocmd BufReadPost *
             \ if line("'\"")>0&&line("'\"")<=line("$") |
