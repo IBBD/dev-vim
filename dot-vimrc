@@ -69,6 +69,8 @@ set background=dark
 "colorscheme solarized
 colorscheme molokai
 
+let g:molokai_original = 1
+
 " 让vim记忆上次编辑的位置
 autocmd BufReadPost *
             \ if line("'\"")>0&&line("'\"")<=line("$") |
@@ -121,6 +123,23 @@ Bundle 'luochen1990/rainbow'
 if executable('ctags')
     Bundle 'majutsushi/tagbar'
 endif
+
+" 快捷键Tagbar
+" http://majutsushi.github.io/tagbar/
+" 对各种编程语言的支持：https://github.com/majutsushi/tagbar/wiki
+let g:tagbar_autofocus=1
+map <F3> :TagbarToggle<CR>
+let g:tagbar_type_go = {
+    \ 'ctagstype': 'go',
+    \ 'kinds' : [
+        \'p:package',
+        \'f:function',
+        \'v:variables',
+        \'t:type',
+        \'c:const'
+    \]
+\}
+
 
 " vim-commentary设置
 " 设置Python注释字符

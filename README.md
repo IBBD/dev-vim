@@ -2,6 +2,16 @@
 
 适合程序猿使用的vim配置，偏向web开发。尽量避免臃肿和影响原生vim的功能，主要是避免影响原生vim的快捷键。
 
+主要面向语言：
+
+- Python
+- Golang
+- PHP
+- Shell
+- Javascript/React
+- Markdown
+- Json
+
 说明：
 本来使用spf13-vim这套插件，也许这插件是偏向前端开发的，用起来很不顺手，对vim原有的东西改变太多，渐生去意，故建立了这个项目。
 
@@ -11,6 +21,7 @@
 
 - 更新配色方案为molokai
 - 新增了两个插件
+- 优化了tagbar的使用，特别是golang
 
 ## 项目目标
 
