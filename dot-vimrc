@@ -4,7 +4,7 @@
 " Filename: dot-vimrc
 " Author:   Alex cyy0523xc@gmail.com
 " Usage:    bash install.sh
-" Version:  2015-11-20
+" Version:  2016-09-26
 " See:      README.md
 "
 
@@ -58,6 +58,10 @@ set incsearch
 
 " 取消代码折叠
 set nofoldenable
+
+set autoread
+set cursorline        "突出显示当前行"
+"set cursorcolumn      "突出显示当前列"
 
 " 让vim记忆上次编辑的位置
 autocmd BufReadPost *
@@ -194,6 +198,15 @@ Bundle 'klen/python-mode'
 Bundle 'yssource/python.vim'
 Bundle 'python_match.vim'
 Bundle 'pythoncomplete'
+Bundle 'Yggdroot/indentLine'
+Bundle 'tell-k/vim-autopep8'
+
+" 缩进指示线"
+let g:indentLine_char='┆'
+let g:indentLine_enabled = 1
+ 
+" autopep8设置"
+let g:autopep8_disable_show_diff=1
 
 " Javascript
 Bundle 'elzr/vim-json'
