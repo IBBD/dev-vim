@@ -25,6 +25,10 @@ syntax on
 autocmd InsertLeave * se nocul  " 用浅色高亮当前行  
 autocmd InsertEnter * se cul    " 用浅色高亮当前行  
 
+set autoread
+set cursorline        "突出显示当前行"
+set cursorcolumn      "突出显示当前列"
+
 " 下面两行在进行编写代码时，在格式对起上很有用；
 " 第一行，vim使用自动对起，也就是把当前行的对起格式应用到下一行；
 " 第二行，依据上面的对起格式，智能的选择对起方式，对于类似C语言编
@@ -59,9 +63,10 @@ set incsearch
 " 取消代码折叠
 set nofoldenable
 
-set autoread
-set cursorline        "突出显示当前行"
-"set cursorcolumn      "突出显示当前列"
+" 配色方案
+set background=dark
+"colorscheme solarized
+colorscheme molokai
 
 " 让vim记忆上次编辑的位置
 autocmd BufReadPost *
@@ -236,13 +241,6 @@ Bundle 'fatih/vim-go'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'carlosgaldino/elixir-snippets'
 Bundle 'mattreduce/vim-mix'
-
-" Color
-Bundle 'altercation/vim-colors-solarized'
-
-"syntax enable
-"set background=dark
-"colorscheme solarized
 
 filetype plugin indent on
 
