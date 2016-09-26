@@ -92,4 +92,7 @@ nmap <leader>nt :NERDTreeFind<CR>
 快捷键是：`Ctrl + p`
 在小窗口里面还可以使用：`Ctrl + j`, `Ctrl + k`
 
+## 附录
+
+- [像IDE一样使用VIM](https://github.com/yangyangwithgnu/use_vim_as_ide)
 
