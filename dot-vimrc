@@ -22,8 +22,8 @@ set history=1000
 
 " 语法高亮度显示
 syntax on 
-autocmd InsertLeave * se nocul  " 用浅色高亮当前行  
-autocmd InsertEnter * se cul    " 用浅色高亮当前行  
+"autocmd InsertLeave * se nocul  " 用浅色高亮当前行  
+"autocmd InsertEnter * se cul    " 用浅色高亮当前行  
 
 set autoread
 set cursorline        "突出显示当前行"
@@ -64,6 +64,7 @@ set incsearch
 set nofoldenable
 
 " 配色方案
+" 注意已经将相应的配置文件复制到~/.vim/colors目录下，否则会报错
 set background=dark
 "colorscheme solarized
 colorscheme molokai

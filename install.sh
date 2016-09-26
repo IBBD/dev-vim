@@ -21,6 +21,11 @@ else
     fi
 fi
 
+# 配色方案
+if [ ! -f ~/.vim/colors/molokai.vim ]; then
+    cp ./molokai/colors/molokai.vim ~/.vim/colors/
+fi
+
 # 交换大小写键和ESC键
 if which xmodmap; then
     if [ ! -f ~/.xmodmap ]; then 
