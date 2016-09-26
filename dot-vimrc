@@ -124,10 +124,11 @@ if executable('ctags')
     Bundle 'majutsushi/tagbar'
 endif
 
-" 快捷键Tagbar
+" Tagbar配置
 " http://majutsushi.github.io/tagbar/
 " 对各种编程语言的支持：https://github.com/majutsushi/tagbar/wiki
 let g:tagbar_autofocus=1
+let g:tagbar_autoclose=1
 map <F3> :TagbarToggle<CR>
 let g:tagbar_type_go = {
     \ 'ctagstype': 'go',
