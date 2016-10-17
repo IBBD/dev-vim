@@ -131,15 +131,15 @@ let g:tagbar_autofocus=1
 let g:tagbar_autoclose=1
 map <F3> :TagbarToggle<CR>
 let g:tagbar_type_go = {
-    \ 'ctagstype': 'go',
-    \ 'kinds' : [
-        \'p:package',
-        \'f:function',
-        \'v:variables',
-        \'t:type',
-        \'c:const'
-    \]
-\}
+            \ 'ctagstype': 'go',
+            \ 'kinds' : [
+            \   'p:package',
+            \   'f:function',
+            \   'v:variables',
+            \   't:type',
+            \   'c:const'
+            \ ]
+            \}
 
 
 " vim-commentary设置
@@ -230,7 +230,7 @@ Bundle 'tell-k/vim-autopep8'
 " 缩进指示线"
 let g:indentLine_char='┆'
 let g:indentLine_enabled = 1
- 
+
 " autopep8设置"
 let g:autopep8_disable_show_diff=1
 
@@ -259,9 +259,9 @@ Bundle 'nono/jquery.vim'
 Bundle 'fatih/vim-go'
 
 " Elixir
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'carlosgaldino/elixir-snippets'
-Bundle 'mattreduce/vim-mix'
+"Bundle 'elixir-lang/vim-elixir'
+"Bundle 'carlosgaldino/elixir-snippets'
+"Bundle 'mattreduce/vim-mix'
 
 filetype plugin indent on
 
@@ -282,78 +282,78 @@ endif
 autocmd BufNewFile *.cpp,*.[ch],*.sh,*.rb,*.java,*.py,*.php exec ":call SetTitle()" 
 " 定义函数SetTitle，自动插入文件头 
 func SetTitle() 
-	"如果文件类型为.sh文件 
-	if &filetype == 'sh' 
-		call setline(1,"\#!/bin/bash") 
-		call append(line("."), "\# ") 
-		call append(line(".")+1, "\# ") 
-		call append(line(".")+2, "\# Author: ") 
-		call append(line(".")+3, "\# Created Time: ".strftime("%c")) 
-		call append(line(".")+4, "") 
+    "如果文件类型为.sh文件 
+    if &filetype == 'sh' 
+        call setline(1,"\#!/bin/bash") 
+        call append(line("."), "\# ") 
+        call append(line(".")+1, "\# ") 
+        call append(line(".")+2, "\# Author: ") 
+        call append(line(".")+3, "\# Created Time: ".strftime("%c")) 
+        call append(line(".")+4, "") 
     elseif &filetype == 'python'
         call setline(1,"# -*- coding: utf-8 -*-")
         call append(line("."),"")
-		call append(line(".")+1, "\# ") 
-		call append(line(".")+2, "\# Author: ") 
-		call append(line(".")+3, "\# Created Time: ".strftime("%c")) 
-		call append(line(".")+4, "") 
+        call append(line(".")+1, "\# ") 
+        call append(line(".")+2, "\# Author: ") 
+        call append(line(".")+3, "\# Created Time: ".strftime("%c")) 
+        call append(line(".")+4, "") 
     elseif &filetype == 'php'
         call setline(1,"<?php")
         call append(line("."),"/**")
-		call append(line(".")+1, " * ") 
-		call append(line(".")+2, " * ") 
-		call append(line(".")+3, " * @author  ") 
-		call append(line(".")+4, " * @created ".strftime("%c")) 
-		call append(line(".")+5, " */") 
-		call append(line(".")+6, "") 
-		call append(line(".")+7, "") 
+        call append(line(".")+1, " * ") 
+        call append(line(".")+2, " * ") 
+        call append(line(".")+3, " * @author  ") 
+        call append(line(".")+4, " * @created ".strftime("%c")) 
+        call append(line(".")+5, " */") 
+        call append(line(".")+6, "") 
+        call append(line(".")+7, "") 
     elseif &filetype == 'go'
-		call setline(1, "/**************************************************") 
-		call append(line("."), "	> File Name: ".expand("%")) 
-		call append(line(".")+1, "	> Author: ") 
-		call append(line(".")+2, "	> Mail: ") 
-		call append(line(".")+3, "	> Created Time: ".strftime("%c")) 
-		call append(line(".")+4, "**************************************************/") 
-		call append(line(".")+5, "package main")
-		call append(line(".")+6, "")
-		call append(line(".")+7, "import ()")
-		call append(line(".")+8, "")
-		call append(line(".")+9, "")
+        call setline(1, "/**************************************************") 
+        call append(line("."), "	> File Name: ".expand("%")) 
+        call append(line(".")+1, "	> Author: ") 
+        call append(line(".")+2, "	> Mail: ") 
+        call append(line(".")+3, "	> Created Time: ".strftime("%c")) 
+        call append(line(".")+4, "**************************************************/") 
+        call append(line(".")+5, "package main")
+        call append(line(".")+6, "")
+        call append(line(".")+7, "import ()")
+        call append(line(".")+8, "")
+        call append(line(".")+9, "")
     elseif &filetype == 'ruby'
         call setline(1,"#!/usr/bin/env ruby")
         call append(line("."),"# encoding: utf-8")
-	    call append(line(".")+1, "")
+        call append(line(".")+1, "")
 
-"    elseif &filetype == 'mkd'
-"        call setline(1,"<head><meta charset=\"UTF-8\"></head>")
-	else 
-		call setline(1, "/**************************************************") 
-		call append(line("."), "	> File Name: ".expand("%")) 
-		call append(line(".")+1, "	> Author: ") 
-		call append(line(".")+2, "	> Mail: ") 
-		call append(line(".")+3, "	> Created Time: ".strftime("%c")) 
-		call append(line(".")+4, "**************************************************/") 
-		call append(line(".")+5, "")
-	endif
-	if expand("%:e") == 'cpp'
-		call append(line(".")+6, "#include<iostream>")
-		call append(line(".")+7, "using namespace std;")
-		call append(line(".")+8, "")
-	endif
-	if &filetype == 'c'
-		call append(line(".")+6, "#include<stdio.h>")
-		call append(line(".")+7, "")
-	endif
-	if expand("%:e") == 'h'
-		call append(line(".")+6, "#ifndef _".toupper(expand("%:r"))."_H")
-		call append(line(".")+7, "#define _".toupper(expand("%:r"))."_H")
-		call append(line(".")+8, "#endif")
-	endif
-	if &filetype == 'java'
-		call append(line(".")+6,"public class ".expand("%:r"))
-		call append(line(".")+7,"")
-	endif
-	"新建文件后，自动定位到文件末尾
+        "    elseif &filetype == 'mkd'
+        "        call setline(1,"<head><meta charset=\"UTF-8\"></head>")
+    else 
+        call setline(1, "/**************************************************") 
+        call append(line("."), "	> File Name: ".expand("%")) 
+        call append(line(".")+1, "	> Author: ") 
+        call append(line(".")+2, "	> Mail: ") 
+        call append(line(".")+3, "	> Created Time: ".strftime("%c")) 
+        call append(line(".")+4, "**************************************************/") 
+        call append(line(".")+5, "")
+    endif
+    if expand("%:e") == 'cpp'
+        call append(line(".")+6, "#include<iostream>")
+        call append(line(".")+7, "using namespace std;")
+        call append(line(".")+8, "")
+    endif
+    if &filetype == 'c'
+        call append(line(".")+6, "#include<stdio.h>")
+        call append(line(".")+7, "")
+    endif
+    if expand("%:e") == 'h'
+        call append(line(".")+6, "#ifndef _".toupper(expand("%:r"))."_H")
+        call append(line(".")+7, "#define _".toupper(expand("%:r"))."_H")
+        call append(line(".")+8, "#endif")
+    endif
+    if &filetype == 'java'
+        call append(line(".")+6,"public class ".expand("%:r"))
+        call append(line(".")+7,"")
+    endif
+    "新建文件后，自动定位到文件末尾
 endfunc 
 autocmd BufNewFile * normal G
 
