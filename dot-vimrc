@@ -253,7 +253,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'gorodinskiy/vim-coloresque'
 Bundle 'tpope/vim-haml'
 Bundle 'othree/html5.vim'
-Bundle 'nono/jquery.vim'
+"Bundle 'nono/jquery.vim'
 
 " Go
 Bundle 'fatih/vim-go'
