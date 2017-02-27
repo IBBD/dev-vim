@@ -1,6 +1,15 @@
 # tmux
 配置文件
 
+## powerline配置
+
+```sh
+# 配置天气
+# 代码中有相应的配置
+# 例如需要配置广州的，对应的城市代码是：2161838
+vim /path/to/powerline/segments/weather.sh
+```
+
 # dev-vim
 适合程序猿使用的vim配置，偏向web开发。尽量避免臃肿和影响原生vim的功能，主要是避免影响原生vim的快捷键。
 
