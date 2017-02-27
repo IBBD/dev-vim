@@ -4,10 +4,16 @@
 ## powerline配置
 
 ```sh
-# 配置天气
+# 设置本地天气
 # 代码中有相应的配置
 # 例如需要配置广州的，对应的城市代码是：2161838
-vim /path/to/powerline/segments/weather.sh
+# 在/path/to/tmux-powerline/powerline.sh文件前面增加：
+export TMUX_POWERLINE_SEG_WEATHER_LOCATION="2161838"
+
+# 具体文档见：segments/weather.sh
+# 1. Go to Yahoo weather http://weather.yahoo.com/
+# 2. Find the weather for you location
+# 3. Copy the last numbers in that URL. e.g. "http://weather.yahoo.com/united-states/california/newport-beach-12796587/" has the numbers "12796587"
 ```
 
 # dev-vim
