@@ -1,6 +1,13 @@
 #!/bin/bash 
 
 source_vimrc=$PWD/dot-vimrc
+source_tmux_conf=$PWD/dot.tmux.conf
+
+if [ ! -f ~/.tmux.conf ]; then
+    ln -s $source_tmux_conf ~/.tmux.conf
+else
+    echo '~/.tmux.conf文件已经存在'
+fi
 
 if [ ! -f ~/.vimrc ]; then 
     ln -s $source_vimrc ~/.vimrc
