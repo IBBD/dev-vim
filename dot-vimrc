@@ -195,7 +195,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'mattn/emmet-vim'
 
 " markdown
-Bundle 'plasticboy/vim-markdown'
+Plugin 'plasticboy/vim-markdown'
 "Bundle 'tpope/vim-markdown'
 "let g:vim_markdown_frontmatter=1
 
@@ -248,7 +248,8 @@ let g:jsx_ext_required = 0
 
 " HTML
 " vim-haml: This project contains the runtime files for Haml, Sass, and SCSS that ship with Vim.
-Bundle 'amirh/HTML-AutoCloseTag'
+" Bundle 'amirh/HTML-AutoCloseTag'
+Bundle 'heracek/HTML-AutoCloseTag'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'gorodinskiy/vim-coloresque'
 Bundle 'tpope/vim-haml'
