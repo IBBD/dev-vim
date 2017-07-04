@@ -30,6 +30,9 @@ fi
 
 # 配色方案
 if [ ! -f ~/.vim/colors/molokai.vim ]; then
+    if [ ! -d ~/.vim/colors ]; then
+        mkdir ~/.vim/colors
+    fi
     cp ./molokai/colors/molokai.vim ~/.vim/colors/
 fi
 
