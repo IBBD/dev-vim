@@ -110,6 +110,13 @@ nmap <leader>nt :NERDTreeFind<CR>
 快捷键是：`Ctrl + p`
 在小窗口里面还可以使用：`Ctrl + j`, `Ctrl + k`
 
+## 常用快捷键列表
+
+- za: 快速折叠和取消折叠
+- <Leader>e: 目录浏览
+- <Leader>\|: md文件中的表格对齐
+- <F3>: 标签浏览
+
 ## 附录
 
 - [像IDE一样使用VIM](https://github.com/yangyangwithgnu/use_vim_as_ide)
