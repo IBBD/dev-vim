@@ -117,6 +117,33 @@ nmap <leader>nt :NERDTreeFind<CR>
 - <Leader>\|: md文件中的表格对齐
 - <F3>: 标签浏览
 
+### Python相关快捷键
+
+Key     | Command
+--------|--------------------------
+[[      | Jump to previous class or function (normal, visual, operator modes)
+]]      | Jump to next class or function  (normal, visual, operator modes)
+[M      | Jump to previous class or method (normal, visual, operator modes)
+]M      | Jump to next class or method (normal, visual, operator modes)
+aC      | Select a class. Ex: vaC, daC, yaC, caC (normal, operator modes)
+iC      | Select inner class. Ex: viC, diC, yiC, ciC (normal, operator modes)
+aM      | Select a function or method. Ex: vaM, daM, yaM, caM (normal, operator modes)
+iM      | Select inner function or method. Ex: viM, diM, yiM, ciM (normal, operator modes)
+]t      | Jump to beginning of block
+]e      | Jump to end of block
+]v      | Select (Visual Line Mode) block
+]<      | Shift block to left
+]>      | Shift block to right
+]#      | Comment selection
+]u      | Uncomment selection
+]c      | Select current/previous class
+]d      | Select current/previous function
+]<up>   | Jump to previous line with the same/lower indentation
+]<down> | Jump to next line with the same/lower indentation
+
+- 运行python代码：`<leader>r`
+
+
 ## 附录
 
 - [像IDE一样使用VIM](https://github.com/yangyangwithgnu/use_vim_as_ide)
