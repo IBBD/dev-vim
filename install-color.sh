@@ -16,10 +16,9 @@ fi
 
 if [ ! -d ~/.vim/colors ]; then 
     mkdir ~/.vim/colors/
-    cp molokai/colors/molokai.vim ~/.vim/colors/
 else
     echo "~/.vim/colors/目录已经存在"
 fi
 
-
+cp molokai/colors/molokai.vim ~/.vim/colors/
 echo "All is OK!"
