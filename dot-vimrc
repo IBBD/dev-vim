@@ -219,7 +219,7 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 
 " PHP
-Bundle 'arnaud-lb/vim-php-namespace'
+"Bundle 'arnaud-lb/vim-php-namespace'
 
 " Python
 Bundle 'klen/python-mode'
@@ -238,25 +238,25 @@ let g:indentLine_enabled = 1
 let g:autopep8_disable_show_diff=1
 
 " Javascript
-Bundle 'elzr/vim-json'
-Bundle 'groenewege/vim-less'
-Bundle 'pangloss/vim-javascript'
-Bundle 'briancollins/vim-jst'
-Bundle 'kchmck/vim-coffee-script'
+"Bundle 'elzr/vim-json'
+"Bundle 'groenewege/vim-less'
+"Bundle 'pangloss/vim-javascript'
+"Bundle 'briancollins/vim-jst'
+"Bundle 'kchmck/vim-coffee-script'
 
 " React
-Bundle 'mxw/vim-jsx'
+"Bundle 'mxw/vim-jsx'
 " 默认只对jsx后缀有效，下面的设置可以让js后缀也有效
-let g:jsx_ext_required = 0
+"let g:jsx_ext_required = 0
 
 " HTML
 " vim-haml: This project contains the runtime files for Haml, Sass, and SCSS that ship with Vim.
 " Bundle 'amirh/HTML-AutoCloseTag'
-Bundle 'heracek/HTML-AutoCloseTag'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'gorodinskiy/vim-coloresque'
-Bundle 'tpope/vim-haml'
-Bundle 'othree/html5.vim'
+"Bundle 'heracek/HTML-AutoCloseTag'
+"Bundle 'hail2u/vim-css3-syntax'
+"Bundle 'gorodinskiy/vim-coloresque'
+"Bundle 'tpope/vim-haml'
+"Bundle 'othree/html5.vim'
 "Bundle 'nono/jquery.vim'
 
 " Go
