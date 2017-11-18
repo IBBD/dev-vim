@@ -8,6 +8,9 @@
 " See:      README.md
 "
 
+" 设置自动换行
+set wrap
+
 " 基础配置
 set number
 
