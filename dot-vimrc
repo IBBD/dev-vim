@@ -232,6 +232,7 @@ Bundle 'pythoncomplete'
 Bundle 'Yggdroot/indentLine'
 Bundle 'tell-k/vim-autopep8'
 let g:pymode_python = 'python3'
+let g:pymode_options = 0
 
 " 缩进指示线"
 let g:indentLine_char='┆'
