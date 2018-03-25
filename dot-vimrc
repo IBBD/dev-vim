@@ -96,16 +96,20 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " 依赖
+" 设置快捷键：Ctrl + F
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 if executable('ag')
     Bundle 'mileszs/ack.vim'
     let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
+    map <c-f> :Ack<space>
 elseif executable('ack-grep')
     let g:ackprg="ack-grep -H --nocolor --nogroup --column"
     Bundle 'mileszs/ack.vim'
+    map <c-f> :Ack<space>
 elseif executable('ack')
     Bundle 'mileszs/ack.vim'
+    map <c-f> :Ack<space>
 endif
 
 " General
@@ -152,7 +156,7 @@ autocmd FileType mako set cms=##\ %s
 
 "map <C-e> <plug>NERDTreeTabsToggle<CR>
 map <leader>e :NERDTreeFind<CR>
-nmap <leader>nt :NERDTreeFind<CR>
+"nmap <leader>nt :NERDTreeFind<CR>
 
 let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$', '.ropeproject']

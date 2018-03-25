@@ -64,6 +64,27 @@ git pull
 
 ## 主要插件使用说明
 
+### 用Ag/Ack在Vim中搜索项目代码
+
+输入`:Ack test_blah`便可以在当前项目代码中搜索`"test_blah"`。常用快捷键：
+
+```
+?           帮助，显示所有快捷键
+Enter/o     打开文件
+O           打开文件并关闭Quickfix
+go          预览文件，焦点仍然在Quickfix
+t           新标签页打开文件
+q           关闭Quickfix
+```
+
+快捷键设置：
+
+```
+map <c-f> :Ack<space>
+```
+
+以后就可以在普通模式下，使用`Ctrl + F`便可以自动输入`:Ack `
+
 ### 自定义快捷键
 
 - 快速将Tab键替换为4个空格：`<Leader>tt` （这里是一个反斜杠）
