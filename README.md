@@ -123,7 +123,6 @@ vmap <Leader>\<Bar> :Tabularize /<Bar><CR>
 
 ```
 map <leader>e :NERDTreeFind<CR>
-nmap <leader>nt :NERDTreeFind<CR>
 ```
 
 ### ctrlp: 快速浏览文件（当前文件夹）
