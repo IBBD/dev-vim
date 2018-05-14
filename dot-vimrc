@@ -66,6 +66,10 @@ set guioptions-=b
 " 使用内置 tab 样式而不是 gui
 set guioptions-=e
 "set nolist
+"
+" gui设置关闭各种按键叮叮声音和闪屏
+set vb t_vb=
+au GuiEnter * set t_vb=
 
 " 查询时非常方便，如要查找book单词，当输入到/b时，会自动找到第一
 " 个b开头的单词，当输入到/bo时，会自动找到第一个bo开头的单词，依
