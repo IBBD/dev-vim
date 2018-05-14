@@ -57,6 +57,16 @@ set ruler
 " 默认情况下，寻找匹配是高亮度显示的，该设置关闭高亮显示
 set nohls
 
+" gui设置不显示工具/菜单栏
+set guioptions-=T
+set guioptions-=m
+set guioptions-=L
+set guioptions-=r
+set guioptions-=b
+" 使用内置 tab 样式而不是 gui
+set guioptions-=e
+"set nolist
+
 " 查询时非常方便，如要查找book单词，当输入到/b时，会自动找到第一
 " 个b开头的单词，当输入到/bo时，会自动找到第一个bo开头的单词，依
 " 次类推，进行查找时，使用此设置会快速找到答案，当你找要匹配的单词
