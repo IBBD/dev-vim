@@ -228,6 +228,7 @@ let g:vim_markdown_new_list_item_indent = 2
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
+let g:ycm_python_binary_path = '/usr/bin/python3'
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -250,7 +251,8 @@ Bundle 'pythoncomplete'
 Bundle 'Yggdroot/indentLine'
 Bundle 'tell-k/vim-autopep8'
 let g:pymode_python = 'python3'
-let g:pymode_options = 0
+let g:pymode_options = 1
+let g:pymode_indent = 1
 
 " 缩进指示线"
 let g:indentLine_char='┆'
