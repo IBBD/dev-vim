@@ -286,6 +286,7 @@ let g:autopep8_disable_show_diff=1
 
 " Go
 Bundle 'fatih/vim-go'
+let g:go_version_warning = 0
 
 " Elixir
 "Bundle 'elixir-lang/vim-elixir'
