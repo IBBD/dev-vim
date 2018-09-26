@@ -1,33 +1,14 @@
-# tmux
-配置文件
+# Dev Vim
 
-## powerline配置
+适合程序猿使用的vim配置，偏向后端开发，数据挖掘等。尽量避免臃肿和影响原生vim的功能，主要是避免影响原生vim的快捷键。
 
-```sh
-# 设置本地天气
-# 代码中有相应的配置
-# 例如需要配置广州的，对应的城市代码是：2161838
-# 在/path/to/tmux-powerline/powerline.sh文件前面增加：
-export TMUX_POWERLINE_SEG_WEATHER_LOCATION="2161838"
+本人vim的主要用途：
 
-# 具体文档见：segments/weather.sh
-# 1. Go to Yahoo weather http://weather.yahoo.com/
-# 2. Find the weather for you location
-# 3. Copy the last numbers in that URL. e.g. "http://weather.yahoo.com/united-states/california/newport-beach-12796587/" has the numbers "12796587"
-```
-
-# dev-vim
-适合程序猿使用的vim配置，偏向web开发。尽量避免臃肿和影响原生vim的功能，主要是避免影响原生vim的快捷键。
-
-主要面向语言：
-
-- Python
+- Python（主要是Python3）
 - Golang
-- PHP
 - Shell
-- Javascript/React
 - Markdown
-- Json
+- Json/yaml...
 
 说明：
 本来使用spf13-vim这套插件，也许这插件是偏向前端开发的，用起来很不顺手，对vim原有的东西改变太多，渐生去意，故建立了这个项目。
@@ -44,8 +25,7 @@ export TMUX_POWERLINE_SEG_WEATHER_LOCATION="2161838"
 
 - 尽量不要改变vim的习惯，包括快捷键等。
 - 文档方面主要是markdown格式
-- 开发语言方面主要是php，python，javascript等，支持react语法最好
-- 交换大小写键和ESC键（基于xmodmap）
+- 开发语言方面主要是python，golang, shell等
 
 ## 安装
 
@@ -54,13 +34,19 @@ export TMUX_POWERLINE_SEG_WEATHER_LOCATION="2161838"
 ```sh 
 # 说明：该脚本也可以用于更新插件
 git pull
+
+# 建议先vim8
+cd vim8
+./install.sh
+
+# install
+cd ..
 ./install.sh 
 ```
 
 注：只在ubuntu平台下使用，其他平台表现未知。
 
 升级的时候，如果提示YCM太旧，则可以重新编译安装YCM：`./install-YoucompleteMe.sh`
-
 
 ## 主要插件使用说明
 
