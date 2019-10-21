@@ -36,19 +36,6 @@ if [ ! -f ~/.vim/colors/molokai.vim ]; then
     cp ./molokai/colors/molokai.vim ~/.vim/colors/
 fi
 
-"""
-# 交换大小写键和ESC键
-if which xmodmap; then
-    if [ ! -f ~/.xmodmap ]; then 
-        ln -s $PWD/dot-xmodmap ~/.xmodmap 
-    else
-        echo '~/.xmodmap已经存在'
-    fi
-else 
-    echo 'xmodmap还没有安装，无法交换大小写键和ESC键'
-fi
-"""
-
 # 配置插件目录
 if [ ! -d ~/.vim/bundle ]; then
     mkdir ~/.vim/bundle -p
