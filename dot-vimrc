@@ -254,6 +254,7 @@ let g:pymode_python = 'python3'
 let g:pymode_options = 1
 let g:pymode_indent = 1
 let g:syntastic_python_python_exec = 'python3'
+let g:pymode_lint_checkers = ['pep8']      " python3.6及之后的新语法
 
 " 缩进指示线"
 let g:indentLine_char='┆'
