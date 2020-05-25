@@ -244,7 +244,10 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 "Bundle 'arnaud-lb/vim-php-namespace'
 
 " Python
-Bundle 'klen/python-mode'
+" git clone https://github.com/python-mode/python-mode ~/.vim/bundle/python-mode
+" pymode依赖：https://github.com/python-mode/python-mode/wiki
+" Bundle 'klen/python-mode'
+Bundle 'python-mode/python-mode'
 Bundle 'yssource/python.vim'
 Bundle 'python_match.vim'
 Bundle 'pythoncomplete'
