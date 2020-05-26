@@ -11,6 +11,9 @@
 " 设置自动换行
 set wrap
 
+" 系统剪切板
+set clipboard=unnamed
+
 " 基础配置
 set number
 
@@ -80,6 +83,8 @@ set incsearch
 " 取消代码折叠
 set nofoldenable
 
+set fileformat=unix
+
 " 配色方案
 " 注意已经将相应的配置文件复制到~/.vim/colors目录下，否则会报错
 set background=dark
@@ -97,6 +102,27 @@ autocmd BufReadPost *
 " 使用tt快捷键，快速替换tab为4个空格
 nmap <Leader>tt :%s/\t/    /g<CR>
 
+" ******************** 分割布局（Split Layouts）**************
+"
+set splitbelow
+set splitright
+
+" split navigations 组合快捷键：
+" Ctrl-j 切换到下方的分割窗口
+" Ctrl-k 切换到上方的分割窗口
+" Ctrl-l 切换到右侧的分割窗口
+" Ctrl-h 切换到左侧的分割窗口
+" nnoremap将一个组合快捷键映射为另一个快捷键
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" 缓冲区（Buffers）
+" 可以把缓冲区想象成最近打开的一个文件。
+" Vim提供了方便访问近期缓冲区的方式
+" 输入:b <buffer name or number>，切换到一个已经开启的缓冲区（此处也可使用自动补全功能）。
+" ls命令查看所有的缓冲区
 
 "--------------------------------------------------------------
 "-------------------------- 插件 ------------------------------
@@ -156,6 +182,16 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+" *************** 代码折叠（Code Folding）**************
+"
+set foldmethod=indent
+set foldlevel=99
+" 折叠（和取消折叠）
+" nnoremap <space> za
+
+Plugin 'tmhedberg/SimpylFold'
+let g:SimpylFold_docstring_preview=1
 
 " 编程基础插件
 Bundle 'scrooloose/syntastic'
@@ -253,6 +289,10 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 let g:ycm_python_binary_path = '/usr/bin/python3'
+" 完成操作之后，自动补全窗口不会消失
+let g:ycm_autoclose_preview_window_after_completion=1
+" 定义了“转到定义”的快捷方式。
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
