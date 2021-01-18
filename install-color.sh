@@ -8,7 +8,7 @@ if [ ! -d molokai ]; then
     if [ ! -d ~/.vim/colors ]; then 
         mkdir ~/.vim/colors/
     fi
-    git clone git@github.com:tomasr/molokai.git
+    git clone https://github.com/tomasr/molokai.git
     cp molokai/colors/molokai.vim ~/.vim/colors/
 else
     echo "./molokai目录已经存在"
