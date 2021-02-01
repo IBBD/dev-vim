@@ -36,3 +36,4 @@ fi
 
 update
 echo "update ok"
+echo "更新完成之后，注意看一下~/.zshrc文件是否正常"
