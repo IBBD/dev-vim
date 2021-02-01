@@ -9,7 +9,7 @@ shrc="~/.zshrc"
 github_clone_func="
 github-clone-api() {
     echo \"git clone https://github.com.cnpmjs.org/\$1\"
-    git clone \"https://github.com.cnpmjs.org/$1\"
+    git clone \"https://github.com.cnpmjs.org/\$1\"
 }
 "
 update_flag="# Added by update-zsh.sh"
